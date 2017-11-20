@@ -45,29 +45,6 @@ header.addEventListener('change', function(event){
     }
 });
 
-/* GO JAVASCRIPT  Тестовые задания по видеоурокам скрипта*/
-function sumTo(n){
-    if(n !=1){
-        return n+sumTo(n-1);
-    }else {
-        return n;
-    }
-}
-
-console.log(sumTo(100));
-
-function getRandom(min,max){
-    if(min >= 5){
-        return min.Math.random();
-    }else if(max <=10){
-        return min.Math.random();
-    }else{
-        alert('Не верное число!')
-    }
-}
-
-console.log(getRandom(5,10));
-
    
 
 
