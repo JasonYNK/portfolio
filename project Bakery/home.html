@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet"/>
+    <script src="https://use.fontawesome.com/45672df75a.js"></script>
+    <title>Пекарня</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <img src="img/logo.png"/>
+        </div>
+        <ul class="header_nav clearfix">
+            <li><a href="home.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="booking.html">Бронирование</a></li>
+            <li><a href="contact.html">Связь с нами</a></li>
+        </ul>
+    </header>
+    <!-- MENU FOR REDUCED VERSION OF NAVIGATION -->
+    <section class="nav_reduce">
+        <form>
+        <select class="nav_reduce_select" name="sel_menu">
+            <option selected="selected">Перейти на ...</option>
+            <option class="header_home" value="home.html">Главная</option>
+            <option class="header_about" value="about.html">О нас</option>
+            <option class="header_menu" value="menu.html">Меню</option>
+            <option class="header_booking" value="booking.html">Бронирование</option>
+            <option class="header_contact" value="contact.html">Связь с нами</option>
+        </select>
+        </form>
+    </section>
+    <section class="main_picture"></section>
+    <!-- СЛАЙДЕР -->
+    <section class="slider">
+        <div class="container">
+            <div class="slider_wrap">
+                <h1 class="slider_h1">Desserts with natural and <br/>alternative sweeteners</h1>
+                <img class="slider_img" src="img/slider_flower.png"/>
+                <div class="slider_slider">
+                    <img id="slider1" class="slider_image slider_image_on" src="img/slider_img01.jpg"/>
+                    <img id="slider2" class="slider_image" src="img/slider_img02.jpg"/>
+                    <img id="slider3" class="slider_image" src="img/slider_img03.jpg"/>
+                    <img id="slider4" class="slider_image" src="img/slider_img04.jpg"/>
+                    <img id="slider5" class="slider_image" src="img/slider_img05.jpg"/>
+                </div>
+                <div class="slider_nav">
+                    <span id="slider_btn1" class="slider_btn btn_active">1</span>
+                    <span id="slider_btn2" class="slider_btn">2</span>
+                    <span id="slider_btn3" class="slider_btn">3</span>
+                    <span id="slider_btn4" class="slider_btn">4</span>
+                    <span id="slider_btn5" class="slider_btn">5</span>
+                </div>
+                <p class="slider_p">PRAESENT VESTIBULUM AENEAN NONUMMY HENDRERIT MAURIS. CUM SOCIIS NATOQUE PENATIB
+                US ET MAGNIS DIS PARTURIENT MONTES ASCETUR RIDICULUS MUS. NULLA DUI. FUSCE FEUGIAT MALESUADA ODIO. M
+                ORBI NUNC ODIO GRAVIDA AT CURSUS NEC LUCTUS A LOREM. MAECENAS TRISTIQUE ORCI AC SEM.</p>
+                <h3 class="slider_h3">Book now</h3>
+                <img class="slider_img" src="img/header_menu.png"/>
+            </div>
+        </div>
+    </section>
+    <!-- INFO -->
+    <section id="info" class="info">
+        <div class="container">
+            <div class="info_block_mainwrap">
+                <div class="info_block">
+                    <div class="info_block_wrap">
+                        <h2 class="info_h2">Our principles1</h2>
+                        <p class="info_p1">PRAESENT VESTIBULUM AENEAN NONUMMY HENDRERIT MAURIS.</p>
+                        <p class="info_p2">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient 
+                        montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci ac sem.</p>
+                    </div>
+                </div>
+                <div class="info_block">
+                    <div class="info_block_wrap">
+                        <h2 class="info_h2">Our principles2</h2>
+                        <p class="info_p1">PRAESENT VESTIBULUM AENEAN NONUMMY HENDRERIT MAURIS.</p>
+                        <p class="info_p2">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient 
+                            montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci ac sem.
+                        </p>
+                    </div>
+                </div>
+                <div class="info_block">
+                    <div class="info_block_wrap">
+                        <h2 class="info_h2">Our principles3</h2>
+                        <p class="info_p1">PRAESENT VESTIBULUM AENEAN NONUMMY HENDRERIT MAURIS.</p>
+                        <p class="info_p2">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient 
+                            montes ascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio gravida at cursus nec luctus a lorem. Maecenas tristique orci ac sem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION -->
+    <section id="flavors" class="flavors">
+        <div class="flavors_wrap">
+            <div class="container">
+                <div class="flavors_main_wrap">
+                    <div class="flavors_animwrap">
+                        <img class="flavors_logo" src="img/header_menu.png"/>
+                        <h3 class="flavors_h3">CHOOSE FROM A NUMBER OF FLAVORS</h3>
+                        <p class="flavors_number">(800) 123 1234</p>
+                        <p class="flavors_p">7 DAYS A WEEK FROM 8:00 AM TO 2:00 AM</p>
+                    </div>
+                </div>
+                <div id="flavors_block" class="flavors_wrapper">
+                    <div class="flavors_block_wrap">
+                        <div class="flavors_miniwrapper">
+                            <div class="flavors_block">
+                                <p class="flavors_data">Jan.5</p>
+                                <p class="flavors_desc">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient
+                                 montes ascetur ridiculus mus. Nulla dui. 
+                                 Fusce feugiat malesuada odio.</p>
+                            </div>
+                            <div class="flavors_block">
+                                <p class="flavors_data">Jan.5</p>
+                                <p class="flavors_desc">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient
+                                 montes ascetur ridiculus mus. Nulla dui. 
+                                 Fusce feugiat malesuada odio.</p>
+                            </div>
+                        </div>
+                        <div class="flavors_miniwrapper">
+                            <div class="flavors_block">
+                                <p class="flavors_data">Jan.5</p>
+                                <p class="flavors_desc">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient
+                                 montes ascetur ridiculus mus. Nulla dui. 
+                                 Fusce feugiat malesuada odio.</p>
+                            </div>
+                            <div class="flavors_block">
+                                <p class="flavors_data">Jan.5</p>
+                                <p class="flavors_desc">Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient
+                                 montes ascetur ridiculus mus. Nulla dui. 
+                                 Fusce feugiat malesuada odio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ARROW UP -->
+    <span id="arrow_up" class="fa fa-arrow-circle-up"></span>
+    <footer class="footer">
+        <div class="footer_logo">
+            <img src="img/footer_logo.png"/>
+        </div>
+    </footer>
+    <script>
+    var anim = 0;
+window.addEventListener('scroll', function(event){
+    var screenHeight = document.documentElement.clientHeight;
+    var info = document.querySelector('#info');
+    var infoDistance = info.getBoundingClientRect().top;
+    
+    if(infoDistance < screenHeight && anim === 0){
+        anim = 1;
+        var infoEl = document.querySelectorAll('.info_block_wrap');
+        for(var i = 0; i < infoEl.length; i++){
+            showBlock(infoEl[i], i);
+        }
+       
+       function showBlock(curInfoEl, i){
+            setTimeout(function(){
+                curInfoEl.classList.add('info_block_anim');
+            }, 150*i);
+       }
+    }
+});
+
+ window.addEventListener('scroll', function(event){
+    var screenHeight = document.documentElement.clientHeight;
+    var flavors = document.querySelector('#flavors');
+    var flavorsDistance = flavors.getBoundingClientRect().top;
+    var flavorsEl = document.querySelector('.flavors_animwrap');
+    if(flavorsDistance < screenHeight) {
+        flavorsEl.classList.add('flavors_animwrap_anim');
+    }
+    
+});
+
+window.addEventListener('scroll', function(event){
+    var screenHeight = document.documentElement.clientHeight;
+    var flavorsBlock = document.querySelector('#flavors_block');
+    var flavorsBlockDistance = flavorsBlock.getBoundingClientRect().top;
+    var flavBlockEl = document.querySelector('.flavors_block_wrap');
+    if(flavorsBlockDistance < screenHeight) {
+        flavBlockEl.classList.add('flavors_block_wrap_anim');
+    }
+    
+});
+
+/* SLIDER */
+
+var sliderBtn = document.querySelectorAll('.slider_btn'); // нашел массив элементов кнопок
+for(var i = 0; i < sliderBtn.length; i++){ // прошелся по массиву циклом for 
+    sliderBtn[i].addEventListener('click', function(event){ // повесил именно на i-тый элемент событие клика
+        var target = event.target; // взял таргет, чтоб понимать на какой именно элемент я кликнул и чтоб он мне показался
+        var btnIdFull = target.id; // взял у таргета айдишник
+        var btnId = +btnIdFull.substr(10); // сократил айдишник до одной цифры при дальнейшей удобной работой с нгим
+        var sliderImageOn = document.querySelector('.slider_image_on'); // нашел класс, который добавляется к элементу, чтоб его включить. По умолчанию я его поставил в html первому элементу.
+        var sliderImageOnFullId = sliderImageOn.id; // взял у этого класса айдишник
+        var sliderImageOnId = +sliderImageOnFullId.substr(6); // сократил айдишник для дальнейшей удобной работы с ним
+        var sliderPics = document.getElementById('slider' + btnId); // нашел айди слайдера, но сделал это так, чтоб он находил сразу не один какой то слайдер, а нужный элемент по таргету
+        
+        var btnOld = document.querySelector('.btn_active');
+        var btnNew = document.getElementById('slider_btn' + btnId);
+        
+        if(sliderImageOnId != btnId){ // если id включенной картинки не равен айдишнику кнопки, то выполняю след. условия
+            sliderImageOn.classList.remove('slider_image_on'); // удаляю класс включен. картинки в ее же классе 
+            sliderPics.classList.add('slider_image_on'); // добавляю класс включенной картинки к нужному элементу
+            
+            btnOld.classList.remove('btn_active'); 
+            btnNew.classList.add('btn_active');
+        }
+    });
+} 
+
+/* Slider with timer */
+
+setInterval(function(){
+    var pics = document.querySelectorAll('.slider_image');
+    var picsLength = pics.length;
+    var slideActive = document.querySelector('.slider_image_on');
+    var slideActiveFullId = slideActive.id;
+    var slideActiveId = +slideActiveFullId.substr(6);
+    var newNumb = slideActiveId + 1;
+    if(newNumb > picsLength){
+        newNumb = 1;
+    }
+    
+    var btnActive = document.querySelector('.btn_active');
+    var btnShow = document.getElementById('slider_btn' + newNumb);
+    
+    var slideShow = document.getElementById('slider' + newNumb);
+    
+    slideActive.classList.remove('slider_image_on');
+    slideShow.classList.add('slider_image_on');
+    
+    btnActive.classList.remove('btn_active'); 
+    btnShow.classList.add('btn_active');
+    
+}, 5000);
+
+
+
+
+
+
+
+
+
+</script>
+    <script src="js/js.js" type="text/javascript"></script>
+</body>
+</html>

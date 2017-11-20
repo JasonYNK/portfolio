@@ -1,0 +1,932 @@
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/Robotolight.woff2') format('woff2'), url('../fonts/Robotolight.woff') format('woff'), url('../fonts/Robotolight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url('../fonts/Robotolightitalic.woff2') format('woff2'), url('../fonts/Robotolightitalic.woff') format('woff'), url('../fonts/Robotolightitalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto.woff2') format('woff2'), url('../fonts/Roboto.woff') format('woff'), url('../fonts/Roboto.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Robotobold.woff2') format('woff2'), url('../fonts/Robotobold.woff') format('woff'), url('../fonts/Robotobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('../fonts/Robotobolditalic.woff2') format('woff2'), url('../fonts/Robotobolditalic.woff') format('woff'), url('../fonts/Robotobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url('../fonts/Robotoblackitalic.woff2') format('woff2'), url('../fonts/Robotoblackitalic.woff') format('woff'), url('../fonts/Robotoblackitalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  padding-bottom: 500px;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 440px;
+}
+
+/* Header */
+.header {
+    background-image: url(../images/header_background.jpg);
+    border-top: 5px solid #fe9c00;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    .header_logo {
+        float: left;
+        margin-left: 20px;
+        transform: translateY(-3px);
+    }
+    .header_iconwrap {
+        width: 106px;
+        height: 22px;
+        float: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        font-size: 0;
+    }
+        .header_icon1 {
+            width: 22px;
+            height: 22px;
+            background-image: url(../images/sprite.png);
+            display: inline-block;
+            margin-right: 20px;
+           
+        }
+        .header_icon2 {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            background-image: url(../images/sprite.png);
+            margin-right: 20px; 
+            background-position: -25px 0;
+        }
+        .header_icon3 {
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            background-image: url(../images/sprite.png); 
+            background-position: -50px 0;
+        }
+    .header_title {
+        padding-top: 40px;
+        color: #fff;
+        text-align: center;
+        padding-bottom: 30px;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .header_title span {
+            text-transform: uppercase;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .header_p {
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        padding-bottom: 45px;
+        font-family: 'Georgia Bold Italic', cursive;
+        font-size: 20px;
+    }
+        .header_p span {
+            color: #febf00;
+        }
+    .header_form {
+        width: 576px;
+        margin: 0 auto;
+        font-size: 0;
+        margin-bottom: 390px;
+    }
+        .header_form_field {
+            display: inline-block;
+            margin-right: 22px;
+            width: 312px;
+            height: 40px;
+            padding: 15px 12px;
+            font-size: 15px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid #f1efed;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .header_form_field::-webkit-input-placeholder {
+            color: #fff;
+            font: 300 15px "Roboto", sans-serif;
+        }
+        .header_form_field:-moz-placeholder {
+            color: #fff;
+            font: 300 15px "Roboto", sans-serif;
+        }
+        .header_form_btn {
+            display: inline-block;
+            width: 242px;
+            height: 40px;
+            padding: 15px 30px;
+            font-size: 18px;
+            box-sizing: border-box;
+            vertical-align: top;
+            line-height: 10px;
+            background-color: #fead00;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+        }
+    .unique_border {
+        height: 5px;
+        background-color: #363636;
+        position: relative;
+    }
+        .unique_border_triangle {
+            position: absolute;
+            top: 5px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 15px solid #363636;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin: 0 auto;
+        }
+/* Section useful */
+.useful {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    border-bottom: 5px solid #fead00;
+    box-sizing: border-box;
+}
+    .useful_title {
+        text-align: center;
+        font: 300 26px "Roboto", sans-serif;
+        padding-bottom: 55px;
+    } 
+        .useful_title span {
+            text-transform: uppercase;
+            color: #fe9c00;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .useful_set {
+        font-size: 0;
+    }
+        .useful_set_column {
+            position: relative;
+            display: inline-block;
+            padding-left: 92px;
+            box-sizing: border-box;
+            width: 500px;
+            margin-bottom: 30px;
+            vertical-align: top;
+        }
+            .useful_set_column_title {
+                text-transform: uppercase;
+                font-size: 15px;
+                padding-bottom: 15px;
+                font-weight: bold;
+            }
+            .useful_set_column_text {
+                font-size: 15px;
+            }
+            .useful_set_check {
+                width: 50px;
+                height: 50px;
+                background-image: url(../images/sprite.png);
+                background-position: 0 -25px;
+                position: absolute;
+                top: 0;
+                left: 20px;
+            }
+/* Section proverb */
+.proverb {
+    padding-top: 50px;
+    background-image: url(../images/proverb_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+    .proverb_title {
+        font-size: 45px;
+        padding-bottom: 50px;
+        text-align: center;
+        color: #fff;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .proverb_span1 {
+            text-transform: uppercase;
+            color: #fe9c00;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .proverb_text {
+        font-size: 26px;
+        font-family: 'Georgia Bold Italic', cursive;
+        padding-bottom: 50px;
+        text-align: center;
+        color: #fff;
+    }
+        .proverb_span2 {
+            color: #fe9c00;
+        }
+    .proverb_form {
+        width: 506px;
+        margin: 0 auto;
+        font-size: 0;
+        margin-bottom: 60px;
+    }
+        .proverb_form_field {
+            display: inline-block;
+            margin-right: 22px;
+            width: 242px;
+            height: 40px;
+            padding: 15px 12px;
+            font-size: 15px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid #f1efed;
+            border-radius: 3px;
+            color: #fff;
+            
+        }
+        .proverb_form_btn {
+            display: inline-block;
+            width: 242px;
+            height: 40px;
+            padding: 15px 30px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: #fead00;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font: 400 18px "Roboto", sans-serif;
+        }
+        .proverb_form_field::-webkit-input-placeholder {
+            color: #fff;
+            font: 300 15px "Roboto", sans-serif;
+        }
+        .proverb_form_field:-moz-placeholder {
+            color: #fff;
+            font: 300 15px "Roboto", sans-serif;
+        }
+/* Section Income */
+.income {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+    .income_title {
+        text-align: center;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .income_title span {
+            text-transform: uppercase;
+            color: #fead00;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .income_3years {
+        display: block;
+        margin:  50px auto 20px auto;
+    }
+    .income_text {
+        text-align: center;
+        font: 300 15px "Roboto", sans-serif;
+        color: #5e5e5e;
+    }
+    .income_icons_wrap {
+        font-size: 0;
+        width: 960px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 75px;
+    }
+        .income_icon {
+            display: inline-block;
+            vertical-align: top;
+            width: 330px;
+            margin:  0 auto;
+        }
+            .income_icon span {
+                font: 700 24px "Roboto", sans-serif;
+            }
+            .income_icon_ball {
+                width: 182px;
+                height: 182px;
+                background-color: #fe9c00;
+                border-radius: 100%;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
+                .income_icon_ball_pic {
+                    display: block;
+                    margin: 0 auto;
+                    padding-top: 30px;
+                }
+                .income_icon_ball_text {
+                    font: 400 18px "Roboto", sans-serif;
+                    text-align: center;
+                    padding-top: 12px;
+                    box-sizing: border-box;
+                    color: #fff;
+                }
+            .income_icon_text {
+                font: 300 15px "Roboto", sans-serif;
+                text-align: center;
+                box-sizing: border-box;
+                margin-top: 20px;
+                color: #5e5e5e;
+            }
+        .income_bigicon {
+            display: inline-block;
+            width: 276px;
+            height: 276px;
+            background-color: #fe9c00;
+            border-radius: 100%;
+            margin-right: 12px;
+            margin-left: 12px;
+            padding-top: 35px;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+            .income_bigicon span {
+                font: 700 24px "Roboto", sans-serif;
+            }
+            .income_bigicon_pic {
+                display: block;
+                margin: 0 auto;
+            }
+            .income_bigicon_text {
+                font-size: 15px;
+                text-align: center;
+                padding-top: 18px;
+                box-sizing: border-box;
+                color: #fff;
+                font: 400 18px "Roboto", sans-serif;
+            }
+/* Section Ready-To-Earn */
+.readytoearn {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fead00;
+}
+    .readytoearn_text {
+        text-align: center;
+        color: #363636;
+        font: 300 40px "Roboto", sans-serif;
+    }
+        .readytoearn_text span {
+            color: #fff;
+            text-transform: uppercase;
+            font: 400 40px "Roboto", sans-serif;
+        }
+/* Section Success */
+.success {
+    padding-top: 70px;
+    background-image: url(../images/success_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 0;
+}
+    .success_title {
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .success_title span {
+            text-transform: uppercase;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .success_block_wrap {
+        width: 960px;
+        margin: 0 auto;
+        margin-top: 67px;
+    }
+        .success_block {
+            display: inline-block;
+            width: 300px;
+            margin-right: 30px;
+            vertical-align: top;
+            margin-bottom: 70px;
+        }
+        .success_block:last-of-type {
+            margin-right: 0;
+        }
+            .success_block_icon {
+                width: 180px;
+                height: 180px;
+                border-radius: 100%;
+                margin: 0 auto;
+                background-color: rgba(255,255,255,0.1);
+                text-align: center;
+            }
+                .success_block_sideimg {
+                    padding-top: 40px;
+                }
+                .success_block_centerimg {
+                    padding-top: 30px;
+                }
+            .success_titletext {
+                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                padding-top: 40px;
+                font: 400 26px "Roboto", sans-serif;
+            }
+            .success_text {
+                text-align: center;
+                color: #dadada;
+                padding-top: 15px;
+                font: 300 18px "Roboto", sans-serif;
+            }
+/* Section benefits */
+.benefits {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+    .benefits_title {
+       text-align: center; 
+       margin-bottom: 50px;
+       font: 300 26px "Roboto", sans-serif;
+    }
+        .benefits_title span {
+            text-transform: uppercase;
+            font: 400 35px "Roboto", sans-serif;
+            color: #fe9c00;
+        }
+        .useful_set_column_text span {
+            text-transform: uppercase;
+        }
+/* Section Testimonials */
+.testimonials {
+    padding-top: 50px;
+    padding-bottom: 72px;
+    border-bottom: 5px solid #fe9c00;
+    box-sizing: border-box;
+    background-image: url(../images/testimonials_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+    .testimonials_title {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 50px;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .testimonials_title span {
+            text-transform: uppercase;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .testimonials_blockwrap {
+        width: 960px;
+        margin: 0 auto;
+        font-size: 0;
+    }
+        .testimonials_image {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 22px;
+            width: 291px;
+        }
+        .testimonials_infoblock {
+            display: inline-block;
+            vertical-align: top;
+            width: 647px;
+        }
+            .testimonials_namewrap {
+                padding-bottom: 20px;
+            }
+                .testimonials_name {
+                   float: left; 
+                   color: #fff;
+                   font: 400 20px "Roboto", sans-serif;
+                }
+                .testimonials_date {
+                    display: inline-block;
+                    float: right;
+                    font-size: 0;
+                }
+                    .testimonials_datetxt {
+                        font: 400 15px "Roboto", sans-serif;
+                        color: #fff;
+                        display: inline-block;
+                        margin-left: 12px;
+                    }
+                    .testimonials_date img {
+                        display: inline-block;
+                        
+                    }
+            .testimonials_rank {
+                padding-bottom: 36px;
+                color: #fff;
+                font: 400 15px "Roboto", sans-serif;
+            }
+            .testimonials_text1 {
+                padding-bottom: 22px;
+                color: #fff;
+                font: italic 15px "Roboto", sans-serif;
+            }
+            .testimonials_text2 {
+                color: #fff;
+                font: 300 15px "Roboto", sans-serif;
+                font-style: italic;
+            }
+/* FOOTER */
+.footer {
+    padding-top: 66px;
+    background: linear-gradient(to bottom, #363636 89%, #2e2e2e 11% )
+    /* background-color: #363636; */
+}
+    .footer_title {
+        text-align: center;
+        padding-bottom: 40px;
+        color: #949494;
+        font: 300 26px "Roboto", sans-serif;
+    }
+        .footer_title span {
+            text-transform: uppercase;
+            color: #fe9c00;
+            font: 400 35px "Roboto", sans-serif;
+        }
+    .footer_text {
+        text-align: center;
+        padding-bottom: 55px;
+        color: #949494;
+        font-family: 'Georgia Bold Italic', cursive;
+        font-size: 20px;
+    }
+    .footer_form {
+        width: 576px;
+        margin: 0 auto;
+        font-size: 0;
+        margin-bottom: 82px;
+    }
+        .footer_form_field {
+            display: inline-block;
+            margin-right: 22px;
+            width: 312px;
+            height: 40px;
+            padding: 15px 12px;
+            font-size: 15px;
+            box-sizing: border-box;
+            vertical-align: top;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid #f1efed;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .footer_form_field::-webkit-input-placeholder {
+            color: #fff;
+        }
+        .footer_form_field:-moz-placeholder {
+            color: #fff;
+        }
+        .footer_form_btn {
+            display: inline-block;
+            width: 242px;
+            height: 40px;
+            padding: 15px 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+            vertical-align: top;
+            line-height: 10px;
+            background-color: #fead00;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    .footer_iconswrap {
+        font-size: 0;
+        width: 211px;
+        margin:  0 auto;
+        margin-bottom: 20px;
+    }
+        .footer_icon1 {
+            display: inline-block;
+            width: 57px;
+            height: 57px;
+            margin-right: 20px;
+            background-image: url(../images/sprite.png);
+            background-position: 0 -78px;
+        }
+        .footer_icon2 {
+            display: inline-block;
+            width: 57px;
+            height: 57px;
+            margin-right: 20px;
+            background-image: url(../images/sprite.png);
+            background-position: -61px -78px;
+        }
+        .footer_icon3 {
+            display: inline-block;
+            width: 57px;
+            height: 57px;
+            margin-right: 0;
+            background-image: url(../images/sprite.png);
+            background-position: -122px -78px;
+        }
+        .footer_icon:last-of-type {
+            margin-right: 0;
+        }
+    .footer_rights {
+        color: #ccc;
+        padding-top: 40px;
+        font: 300 14px "Roboto", sans-serif;
+    }
+
+/* Media Mobile */
+@media only screen
+and (min-width: 320px)
+and (max-width: 736px) {
+    /* Header */
+    .unique_border {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+    .header_logo {
+        float: none;
+        margin: 0 auto;
+        padding-top: 10%;
+        transform: none;
+        display: block;
+    } 
+        .header_iconwrap {
+            display: none;
+        }
+            .header_title {
+                font-size: 175%;
+                font-weight: bold;
+            }
+                .header_title span {
+                    font-size: 75%;
+                    font-weight: bold;
+                }
+            .header_p {
+                font-size: 125%;
+            }
+    .header_form {
+        width: 100%;
+  }
+    .header_form_field {
+        display: block;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .header_form_btn {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+/* Useful section */
+    .useful_set_column {
+        width: 100%;
+        padding: 0;
+    }
+        .useful_set_check {
+            display: none;
+        }
+/* Proverb section */
+.proverb_form {
+    width: 100%;
+    padding: 0;
+}
+     .proverb_form_field {
+        width: 100%;
+        display: block;
+        margin-bottom: 10%;
+     }
+     .proverb_form_btn {
+        width: 100%;
+        display: block;
+     }
+/* Income section */
+.income_text {
+    margin-bottom: 10%;
+}
+.income_icons_wrap {
+    width: 100%;
+    margin: 0;
+}
+    .income_icon {
+        display: block;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .income_bigicon {
+        display: none;
+    }
+/* Success section */
+.success_block_wrap {
+    width: 100%;
+}
+.success_block {
+    display: block;
+    width: 100%;
+    margin-bottom: 10%;
+}
+/* Benefits section */
+.benefits_title {
+    font-size: 200%;
+}
+    .useful_set_column_title {
+        font-size: 20px;
+        text-align: center;
+        color: #fe9c00;
+    }
+/* ready to earn section */
+.readytoearn_text {
+    font-size: 100%;
+}
+    .readytoearn_text span {
+        font-size: 200%;
+    }
+/* testimonials section */
+.testimonials_blockwrap {
+    width: 100%;
+}
+    .testimonials_image {
+        width: 100%;
+        margin: 0;
+    }
+    .testimonials_infoblock {
+        width: 100%;
+        display: block;
+    }
+        .testimonials_name {
+            margin-top: 10%; 
+        }
+        .testimonials_date {
+            margin-top: 10%;
+            margin-bottom: 10%: 
+        }
+/* footer */
+.footer_form {
+    width: 100%;
+}
+    .footer_form_field {
+        width: 100%;
+        display: block;
+        margin-bottom: 10%;
+    }
+    .footer_form_btn {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* IPad screen */
+/* Media Mobile */
+@media only screen
+and (min-width: 737px)
+and (max-width: 1024px) {
+     /* Header */
+    .unique_border {
+        width: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+    /* Useful section */
+    .useful_set_column {
+        position: relative;
+        display: inline-block;
+        padding-left: 92px;
+        box-sizing: border-box;
+        width: 50%;
+        margin-bottom: 30px;
+        vertical-align: top;
+    }
+    /* Section Income */
+    .income_icons_wrap {
+        font-size: 0;
+        width: 100%;
+    }
+        .income_icon {
+            width: 34%;
+        }
+            .income_icon span {
+                font: 700 18px "Roboto", sans-serif;
+            }
+            .income_icon_ball {
+                width: 135px;
+                height: 135px;
+            }
+                .income_icon_ball_pic {
+                    width: 35%;
+                    margin: 0 auto;
+                }
+                .income_icon_ball_text {
+                    font: 400 12px "Roboto", sans-serif;
+                }
+            .income_icon_text {
+                font: 300 12px "Roboto", sans-serif;
+            }
+        .income_bigicon {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+        }
+            .income_bigicon_pic {
+                width: 75%;
+                margin: 0 auto;
+                }
+            .income_bigicon span {
+                font: 700 18px "Roboto", sans-serif;
+            }
+            .income_bigicon_text {
+                font-size: 12px;
+                font: 400 14px "Roboto", sans-serif;
+            }
+    /* Success section */
+    .success_block_wrap {
+        width: 100%;
+        padding-bottom: 60px;
+    }
+        .success_block {
+            width: 33%;
+            margin: 0;
+        }
+            .success_block_icon {
+                width: 150px;
+                height: 150px;
+            }
+                .success_block_sideimg {
+                    width: 90px;
+                    height: 55px;
+                    padding-top: 50px;
+                    
+                }
+                .success_block_centerimg {
+                    padding: 15px 0;
+                }
+                    .success_titletext {
+                        font-size: 20px;
+                    }
+                    .success_text {
+                        font-size: 14px;
+                        vertical-align: top;
+                    }
+    /* Testimonials section */
+    .testimonials_blockwrap {
+        width: 100%;
+    }
+        .testimonials_image {
+            width: 30%;
+            margin-right: 10%;
+        }
+        .testimonials_infoblock {
+            width: 50%;
+        }
+}

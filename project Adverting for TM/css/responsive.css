@@ -1,0 +1,340 @@
+/* MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA MEDIA */
+@media only screen
+and (min-width: 320px)
+and (max-width: 736px) {
+	/* Header responsive */
+	.header {
+		display: none;
+	}
+	.responsive-menu {
+		display: block;
+	}
+	.responsive-list {
+		display: block;
+	}
+	.responsive-list-js {
+		display: block;
+		left: 0;
+}
+	/* Slider responsive */
+ .slider .container {
+ 	position: relative;
+ 	width: 90%;
+ }
+ 	.slider-pages { 
+		width: 90%;
+		padding-top: 100px;
+		padding-bottom: 100px;
+ 	} 
+ 	.slider-pages-wrap {
+		width: 100%;
+ 	}
+			.slider-page {
+				display: inline-block;
+				width: 100%;
+			}
+				.slider-page-title {
+					font: 700 30px 'Poppins', sans-serif;
+				} 
+					.slider-page-title span img {
+						width: 260px;
+					}
+				.slider-page-text {
+					font: 700 18px 'Poppins', sans-serif;
+				}
+	.slider-arrow-left {
+		display: none;
+	}
+	.slider-arrow-right {
+		display: none;
+	}
+/* About-US responsive */
+.about-us {
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+.about-us .container {
+	width: 90%;
+}
+	.about-us-title {
+		font-size: 18px;
+	}
+	.about-us-desc {
+		width: 100%;
+		font-size: 14px;
+	}
+	.about-us-relation {
+		background: #000;
+		position: relative;
+	}
+		.about-us-relation-ratio {
+			padding-top: 56.25%;
+			height: 0;
+		}
+	.about-us-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+/* Skills responsive */
+.skills {
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+	.skills-block {
+		display: block;
+		margin: 15px auto;
+	}
+	.skills-block:last-of-type {
+		margin: 0 auto;
+	}
+/* Services responsive */
+.services {
+	padding-top: 45px;
+	padding-bottom: 30px;
+}
+.services .container {
+	width: 90%;
+}
+	.services-title {
+		font: 700 30px 'Poppins', sans-serif;
+		margin-bottom: 30px;
+	}
+	.services-desc {
+		font: 400 14px 'Poppins', sans-serif;
+		margin-bottom: 44px;
+	}
+		.services-block {
+			width: 100%;
+			margin: 0 auto;
+			display: block;
+			margin-bottom: 20px;
+		}
+		.services-block:nth-of-type(3n) {
+			margin-bottom: 20px;
+		}
+/* Team responsive */
+.team {
+	padding-top: 30px;
+	padding-bottom: 45px;
+}
+	.team-title {
+		font: 30px 'Myriad Pro Regular', sans-serif;
+		margin-bottom: 30px;
+	}
+	.team-desc {
+		font: 15px 'Myriad Pro Regular', sans-serif;
+		margin-bottom: 45px;
+	}
+		.team-block {
+			width: 300px;
+			margin: 30px auto;
+			display: block;
+		}
+		.team-block:last-of-type {
+			margin: 0 auto;
+		}
+/* Email responsive */
+.email-form {
+		width: 100%;
+	}
+		.email-form-field {
+			width: 70%;
+		}
+		.email-form-btn {
+			width: 30%;
+			display: inline-block;
+			font: 700 12px 'Poppins', sans-serif;
+			padding: 5px 10px;
+		}
+		.footer-rights {
+			font: 400 14px 'Poppins', sans-serif;
+			float: none;
+			text-align: center;
+			display: block;
+			margin-bottom: 15px;
+		}
+		.footer-icons {
+			float: none;
+			display: block;
+		}
+} 
+
+@media only screen
+and (min-width: 737px)
+and (max-width: 1170px) {
+	/* Header responsive */
+	.container {
+		width: 90%;
+	}
+	.header-logo-text {
+		font-size: 15px;
+		margin-left: 5px;
+		padding-top: 10px;
+	}
+	.header_nav {
+		padding: 30px 0;
+		margin-right: 80px;
+	}
+	.header_nav li {
+		margin-right: 10px;
+	}
+	.header_nav li a {
+		font: 400 14px 'Poppins', sans-serif;
+	}
+	.header_callbtn {
+		display: none;
+	}
+	/* Slider responsive */
+	.slider .container {
+ 	position: relative;
+ 	width: 90%;
+ }
+ 	.slider-pages { 
+		width: 90%;
+		padding-top: 100px;
+		padding-bottom: 100px;
+ 	} 
+ 	.slider-pages-wrap {
+		width: 100%;
+ 	}
+			.slider-page {
+			display: inline-block;
+			width: 100%;
+			}
+				.slider-page-title {
+				font: 400 40px 'Poppins', sans-serif;
+				} 
+					.slider-page-title span {
+					font-size: 80px;
+					}
+				.slider-page-text {
+				font: 400 24px 'Poppins', sans-serif;
+				}
+	.slider-arrow-left {
+			position: absolute;
+			top: 450px;
+			left: 100px;
+		}
+		.slider-arrow-right {
+			position: absolute;
+			top: 450px;
+			right: 100px;
+		}
+/* About-us Responsive */
+.about-us .container {
+	width: 90%;
+}
+	.about-us-desc {
+		width: 100%;
+	}
+/* Skills responsive */
+.skills {
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+	.skills-block {
+		margin-right: 0;
+		width: 41%;
+	}
+	.skills-block:nth-of-type(2n-1) {
+		margin-right: 10%;
+		margin-left: 4%;
+	}
+	.skills-block:nth-of-type(2n) {
+		margin-right: 4%;
+	}
+		.skills-block-title {
+			font: 400 22px 'Poppins', sans-serif;
+		}
+/* Services responsive */
+		.services-block {
+			width: 45%;
+			margin-right: 10%;
+			display: inline-block;
+			margin-bottom: 36px;
+		}
+		.services-block:nth-of-type(2n) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		.services-block:nth-of-type(3) {
+			margin-right: 10%;
+		}
+			.services-block-title {
+				font: 400 16px 'Poppins', sans-serif;
+				padding-left: 100px;
+			}
+/* Team responsive */
+.team {
+	padding-top: 30px;
+	padding-bottom: 45px;
+}
+	.team-title {
+		font: 30px 'Myriad Pro Regular', sans-serif;
+		margin-bottom: 30px;
+	}
+	.team-desc {
+		font: 15px 'Myriad Pro Regular', sans-serif;
+		margin-bottom: 45px;
+	}
+		.team-block {
+			width: 370px;
+			margin: 30px auto;
+			display: block;
+		}
+		.team-block:last-of-type {
+			margin: 0 auto;
+		}
+.email-form {
+		width: 100%;
+	}
+		.email-form-field {
+			width: 70%;
+		}
+		.email-form-btn {
+			width: 30%;
+			display: inline-block;
+			font: 700 12px 'Poppins', sans-serif;
+			padding: 5px 10px;
+		}
+}
+/*Exceptions for arrows */
+@media only screen
+	and (min-width: 1170px)
+	and (max-width: 1400px){
+		.slider-arrow-left {
+			position: absolute;
+			top: 675px;
+			left: 100px;
+		}
+		.slider-arrow-right {
+			position: absolute;
+			top: 675px;
+			right: 100px;
+		}
+	}
+@media only screen
+and (min-width: 1400px)
+and (max-width: 1800px) {
+	.slider-arrow-left {
+			left: -100px;
+		}
+		.slider-arrow-right {
+			right: -100px;
+		}
+
+	
+}
+@media only screen
+	and (min-width: 737px)
+	and (max-width: 895px) {
+		.slider-arrow-left {
+			top: 500px;
+		}
+		.slider-arrow-right {
+			top: 500px;
+		}
+	}
