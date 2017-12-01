@@ -3,34 +3,239 @@
 <head>
 	<meta charset="UTF-8">
 	<title>live-chat</title>
-	<link rel="stylesheet" href="css/style.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<style>	
+	* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.list-wrap {
+	font-size: 0;
+}
+	.list {
+		vertical-align: top;
+		width: 15%;
+		min-height: 100vh;
+		display: inline-block;
+		background-color: #FD8A5F; 
+	}
+		.list-info {
+			
+		}
+			.list-info img {
+				vertical-align: top;
+				display: inline-block;
+				border-radius: 100%; 
+				width: 75px;
+				height: 75px;
+			}
+			.list-info p {
+				vertical-align: top;
+				font-size: 20px;
+				display: inline-block;
+				padding-left: 15px;
+				padding-top: 25px;
+				font-weight: bold;
+				color: #fff;
+			}
+	.chat {
+		position: relative;
+		width: 85%;
+		min-height: 100vh;
+		display: inline-block;
+	}
+		.chat-window {
+
+		}
+			.chat-authorization {
+				display: block;
+				width: 400px;
+				margin: 0 auto;
+				padding: 15px;
+				background-color: #EFEFEE;
+				box-sizing: border-box;
+			}
+				.chat-authorization-title {
+					font-size: 16px;
+					margin-bottom: 15px;
+				}
+				.chat-authorization-form {
+					padding: 15px;
+					background-color: #fff;
+				}
+					.chat-authorization-form input {
+						width: 100%;
+						margin-bottom: 10px;
+						padding: 10px;
+						border-radius: 20px;
+						box-sizing: border-box; 
+						outline: none;
+					}
+					.chat-authorization-form button {
+						display: inline-block;
+						font-size: 14px;
+						margin-left: auto;
+						margin-right: 0;
+						display: block;
+						padding: 10px 20px;
+						cursor: pointer;
+						margin-top: 30px;
+						color: #fff;
+						background-color: #FD8A5F; 
+						border-radius: 10px;
+						border: none;
+						outline: none;
+					}
+					.chat-authorization-form button:active {
+						background-color: #FDA35F;
+					}
+		.message-container {
+			position: absolute;
+			bottom: 75px;
+			left: 0;
+			right: 0;
+			width: 95%;
+			margin: 0 auto;
+			display: none;
+		}
+		.chat-panel {
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			right: 0;
+			width: 95%;
+			margin: 0 auto;
+		}
+			.chat-panel input {
+				width: 75%;
+				display: inline-block;
+				box-sizing: border-box;
+				padding: 8px;
+				border-radius: 10px;
+				outline: none;
+			}
+			.chat-sendBtn {
+				margin-left: 10%;
+				outline: none;
+				padding: 8px;
+				box-sizing: border-box;
+				display: inline-block;
+				font-size: 20px;
+				width: 15%;
+				text-align: center;
+				background-color: #FF8E69;
+				color: #fff;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			.chat-sendBtn:active {
+				background-color: #FDA35F;
+			}
+			.chat-message {
+				list-style-type: none;
+				margin-bottom: 15px;
+				font-size: 20px;
+			}
+	</style>
 </head>
 <body>
 	<div class="list-wrap">
 		<div class="list">
 			<div class="list-info">
-				<img src="img/no-image.png" alt="">
+				<!-- <img src="img/no-image.png" alt=""> -->
 				<p>Добро пожаловать!</p>
 			</div>
+			<ul id="users-container" class="list-info-users">
+				<!-- users here -->
+			</ul>
 		</div>
 		<div class="chat">
 			<div class="chat-window">
 				<div class="chat-authorization">
 					<h3 class="chat-authorization-title">Авторизация</h3>
 					<form class="chat-authorization-form" action="" method="get">
-						<input type="text" placeholder="ФИО">
-						<input type="text" placeholder="Ник">
-						<button>Войти</button>
+						<input id="authorization-fullname" type="text" placeholder="ФИО">
+						<input id="authorization-nickname" type="text" placeholder="Ник">
+						<button id="authorization-button">Войти</button>
 					</form>
 				</div>
 			</div>
-			<ul class="message-container"></ul>
-			<div class="chat-panel">
-				<input type="text">
-				<span class="chat-sendBtn">Отправить</span>
-			</div>
+			<ul id="message-container" class="message-container">
+				<!-- messages here -->
+			</ul>
+			<form id="messageForm" class="chat-panel">
+				<input id="message" type="text">
+				<button id="sendBtn" type="submit" class="chat-sendBtn">Отправить</button>
+			</form>
 		</div>
 	</div>	
-	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		var socket = io.connect();
+				
+		var sendBtn = document.querySelector('#sendBtn');
+		var message = document.querySelector('#message');
+		var messageContainer = document.querySelector('#message-container');
+		var usersContainer = document.querySelector('#users-container');
+		var chatAuthorization = document.querySelector('.chat-authorization');
+		var authorizationButton = document.querySelector('#authorization-button');
+		var chatAuthorizationSwitch = 1;
+
+		var authorizationFullname = document.querySelector('#authorization-fullname');
+		var authorizationNickname = document.querySelector('#authorization-nickname');
+
+
+		sendBtn.addEventListener('click', function(event) {
+			event.preventDefault();
+
+			if (chatAuthorizationSwitch === 1) {
+				alert('Сначала авторизируйтесь!');
+				message.value = '';
+				return;
+			} 
+
+			socket.emit('send message', message.value);
+			message.value = '';
+		});
+				
+
+		socket.on('new message', function(data) {
+			var messageItem = document.createElement('li');
+        	messageItem.textContent = data.msg;
+        	messageItem.className = "chat-message";
+        	messageContainer.appendChild(messageItem);
+		});
+
+		socket.on('new user', function(data) {
+			var user = document.createElement('li');
+        	user.textContent = data.user;
+        	user.className = "list-info-users-item";
+        	usersContainer.appendChild(user);
+		});
+
+
+		authorizationButton.addEventListener('click', function(event) {
+			event.preventDefault();
+
+			if (authorizationFullname.value === '' || authorizationNickname.value === '') {
+				alert('Заполните все поля!');
+				return;
+			}
+
+			socket.emit('create user', authorizationFullname.value, authorizationNickname.value);
+			
+
+			chatAuthorization.style.display = 'none';
+			messageContainer.style.display = 'block';
+			chatAuthorizationSwitch = 0;
+		});
+
+	</script>
 </body>
 </html>
