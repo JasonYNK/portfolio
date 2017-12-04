@@ -3,6 +3,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 
+
 users = [];
 connections = [];
 
@@ -29,9 +30,11 @@ io.sockets.on('connection', function(socket) {
 		socket.on('send message', function(data){
 			io.sockets.emit('new message', {msg:data});
 		});
-
-		// Create user 
 		socket.on('create user', function(data){
 			io.sockets.emit('new user', {user:data});
 		});
+		socket.on('create userNickname', function(data){
+			io.sockets.emit('new userNickname', {userNickname:data});
+		});
+
 });

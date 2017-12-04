@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>live-chat</title>
 	<script src="/socket.io/socket.io.js"></script>
-	<style>	
-	* {
-    margin: 0;
-    padding: 0;
+	
+<!-- STYLES -->
+	<style>
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .clearfix:after {
@@ -44,6 +46,11 @@
 				padding-top: 25px;
 				font-weight: bold;
 				color: #fff;
+			}
+			.list-info-users-item {
+				font-size: 24px;
+				color: #fff;
+				padding: 15px;
 			}
 	.chat {
 		position: relative;
@@ -144,15 +151,17 @@
 				font-size: 20px;
 			}
 	</style>
+	<!-- STYLES END -->
 </head>
 <body>
 	<div class="list-wrap">
 		<div class="list">
 			<div class="list-info">
 				<!-- <img src="img/no-image.png" alt=""> -->
-				<p>Добро пожаловать!</p>
+				<p class="list-info-greetings">Добро пожаловать! <br></p>
 			</div>
 			<ul id="users-container" class="list-info-users">
+				<li class="list-info-users-item">Участники чата:</li>
 				<!-- users here -->
 			</ul>
 		</div>
@@ -175,7 +184,8 @@
 				<button id="sendBtn" type="submit" class="chat-sendBtn">Отправить</button>
 			</form>
 		</div>
-	</div>	
+	</div>
+	<!-- JAVASCRIPT -->
 	<script type="text/javascript">
 		var socket = io.connect();
 				
@@ -186,6 +196,7 @@
 		var chatAuthorization = document.querySelector('.chat-authorization');
 		var authorizationButton = document.querySelector('#authorization-button');
 		var chatAuthorizationSwitch = 1;
+		var greetText = document.querySelector('.list-info-greetings');
 
 		var authorizationFullname = document.querySelector('#authorization-fullname');
 		var authorizationNickname = document.querySelector('#authorization-nickname');
@@ -213,8 +224,15 @@
 		});
 
 		socket.on('new user', function(data) {
+			greetText.innerHTML += '<p>' + data.user + '</p>';
+			// var user = document.createElement('li');
+        	// user.textContent = data.user;
+        	// user.className = "list-info-users-item";
+        	// usersContainer.appendChild(user);
+		});
+		socket.on('new userNickname', function(data) {
 			var user = document.createElement('li');
-        	user.textContent = data.user;
+        	user.textContent = data.userNickname;
         	user.className = "list-info-users-item";
         	usersContainer.appendChild(user);
 		});
@@ -228,8 +246,10 @@
 				return;
 			}
 
-			socket.emit('create user', authorizationFullname.value, authorizationNickname.value);
 			
+			socket.emit('create user', authorizationFullname.value);
+			socket.emit('create userNickname', authorizationNickname.value);
+			authorizationFullname.value = '';
 
 			chatAuthorization.style.display = 'none';
 			messageContainer.style.display = 'block';
